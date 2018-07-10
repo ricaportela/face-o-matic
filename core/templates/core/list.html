@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %}Face-o-Matic{% endblock title %}
+
+{% block content %}
+
+
+ <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 class="text-center mt-4 mb-3">Lista de Fotografias</h1>
+                <div class="row">
+
+                    {% for obj in documents %}
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">
+                                <img class="card-img-top"
+                                     src="{{ obj.image.url }}"
+                                     alt="{{ obj.description }}">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ obj.description }}
+                                     </h5>
+                                    <!--<p class="card-text">{{ movel.descricao }}</p>
+                                    <a href="#" class="btn btn-primary">Detalhes</a> -->
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+{% endblock %}
