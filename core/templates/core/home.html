@@ -21,7 +21,7 @@
         <ul>
           {% for obj in documents %}
           <li>
-            <a href="{{ obj.image.url }}">{{ obj.image.name }} </a>
+            <a href="{{ obj.image }}">{{ obj.image.name }} </a>
             <small>(Carregamentos de Hoje: {{ obj.uploaded_at }})</small>
           </li>
           {% endfor %}
